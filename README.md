@@ -20,8 +20,8 @@ Telegram bot for live round and result notifications.
 
 ## Setup
 
-1. Create a Telegram bot with BotFather and put its token in the BOT_TOKEN environment variable.
-2. Install dependencies with pip install -r requirements.txt.
-3. Run python bot.py.
+1. Set the BOT_TOKEN environment variable on Render.
+2. Install dependencies with `pip install -r requirements.txt`.
+3. Run `python bot.py`.
 
 The repository does not include a Telegram token or private credentials.
