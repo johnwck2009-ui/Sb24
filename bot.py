@@ -5,32 +5,25 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
 logging.basicConfig(level=logging.INFO)
-log = logging.getLogger("sb24-live-results")
+log = logging.getLogger("sb24-info")
 
 BOT_TOKEN = os.environ["BOT_TOKEN"]
 
 state = {
-    "round_id": None,
-    "result": None,
+    "latest_info": None,
 }
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
-        "សូមស្វាគមន៍មកកាន់ SB24 Live Results។\n"
-        "ទទួលបានការជូនដំណឹងអំពីជុំផ្សាយផ្ទាល់ និងលទ្ធផលថ្មីៗ។"
+        "សូមស្វាគមន៍មកកាន់ SB24 Info។\n"
+        "ទទួលបានព័ត៌មាន និងការជូនដំណឹងថ្មីៗតាម Telegram។"
     )
 
 
 async def latest(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    if not state["round_id"]:
-        await update.message.reply_text("មិនទាន់មានទិន្នន័យថ្មី។")
-        return
-
-    result = state["result"] or "កំពុងរង់ចាំលទ្ធផល"
-    await update.message.reply_text(
-        f"Round: {state['round_id']}\nResult: {result}"
-    )
+    info = state["latest_info"] or "មិនទាន់មានព័ត៌មានថ្មី។"
+    await update.message.reply_text(f"ព័ត៌មានថ្មីៗ៖ {info}")
 
 
 async def status(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
