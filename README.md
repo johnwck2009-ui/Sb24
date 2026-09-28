@@ -1,14 +1,14 @@
-# SB24 Live Results Bot
+# SB24 Info Bot
 
-Telegram bot for live round and result notifications.
+Telegram bot for general information and updates.
 
 ## Telegram profile
 
-**Name:** SB24 Live Results
+**Name:** SB24 Info
 
-**About:** ការជូនដំណឹងអំពីជុំផ្សាយផ្ទាល់ និងលទ្ធផលថ្មីៗ
+**About:** ព័ត៌មាន និងការជូនដំណឹងថ្មីៗ
 
-**Description:** ជូនដំណឹងអំពីជុំផ្សាយផ្ទាល់ និងលទ្ធផលថ្មីៗដោយស្វ័យប្រវត្តិ។
+**Description:** ទទួលបានព័ត៌មាន និងការជូនដំណឹងថ្មីៗតាម Telegram។
 
 ## Features
 
@@ -16,7 +16,7 @@ Telegram bot for live round and result notifications.
 - /latest command
 - /status command
 - Uses only the Telegram Bot API
-- No external live-data URL or API required
+- No external data URL or API required
 - Ready to deploy on Render
 
 ## Setup
@@ -29,4 +29,4 @@ The repository does not include the Telegram token or other private credentials.
 
 ## Important
 
-This version does not automatically obtain live round/result data from an external source. It can run independently using only the Telegram Bot API.
+This version provides general informational updates through Telegram and does not include betting, wagering, odds, casino, lottery, prediction, or gambling functionality.
